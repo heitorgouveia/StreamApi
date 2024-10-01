@@ -1,6 +1,7 @@
 import java.util.List;
 import java.util.Arrays;
 import java.util.function.Predicate;
+import java.util.stream.Stream;
 
 
 public class Desafio9 {
@@ -13,8 +14,8 @@ public class Desafio9 {
 
        
         
-        numeros.stream().distinct().forEach(System.out::println);
-        
-    
+       Stream<Integer> numero = numeros.stream().distinct();
+
+       numero.forEach(System.out::println);
 }
 }
